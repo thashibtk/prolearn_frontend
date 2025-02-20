@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { loginUser } from "../api";
 import LoadingModal from "../components/ui/LoadingModal";
+import { Link } from "react-router-dom";
+
 
 const Login = ({ setIsAuthenticated }) => {
     const [formData, setFormData] = useState({
@@ -98,6 +100,11 @@ const Login = ({ setIsAuthenticated }) => {
                     >
                         Sign up
                     </button>
+                </p>
+                <p className="mt-4 text-center">
+                    <Link to="/admin-login" className="text-blue-400 hover:underline">
+                    Admin Login
+                    </Link>
                 </p>
             </div>
         </div>
